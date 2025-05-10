@@ -16,7 +16,7 @@
 
 ## RNs (Regras de Negócios)
 
-- [ ] O usuário não deve poder se cadastrar com um e-mail duplicado
+- [x] O usuário não deve poder se cadastrar com um e-mail duplicado
 - [ ] O usuário não pode fazer 2 check-ins no mesmo dia
 - [ ] O check-in não pode fazer check-in se estiver perto (100m) da academia
 - [ ] O check-in só pode ser validao até 20min após ser criado
@@ -26,7 +26,7 @@
 
 ## RNFs (Requisitos não-funcionais)
 
-- [ ] A senha do usuário precisa estar criptografada
-- [ ] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL
+- [x] A senha do usuário precisa estar criptografada
+- [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL
 - [ ] Todas as listas de dados precisam estar paginadas com 20 itens por pagina
 - [ ] O usuário deve ser identificado por um JWT (JSON Web Token)
