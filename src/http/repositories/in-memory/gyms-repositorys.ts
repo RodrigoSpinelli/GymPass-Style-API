@@ -1,5 +1,5 @@
 import type { GymsRepository } from "../gyms-repository";
-import { Gym, Prisma } from "@prisma";
+import { Gym } from "@prisma";
 
 export class InMemoryGymsRepository implements GymsRepository {
   public items: Gym[] = [];
