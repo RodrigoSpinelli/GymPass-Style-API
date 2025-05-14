@@ -1,5 +1,6 @@
-import { Gym } from "@prisma";
+import { Gym, Prisma } from "@prisma";
 
 export interface GymsRepository {
   findById(id: string): Promise<Gym | null>;
+  create(data: Prisma.GymCreateInput): Promise<Gym>;
 }
