@@ -19,9 +19,12 @@ export const AuthenticateController = async (
   try {
     const { user } = await authenticateUseCase.execute({ email, password });
 
-    const token = await reply.jwtSign({}, { sign: { sub: user.id } });
+    const token = await reply.jwtSign(
+      { role: user.role },
+      { sign: { sub: user.id } }
+    );
     const refreshToken = await reply.jwtSign(
-      {},
+      { role: user.role },
       { sign: { sub: user.id, expiresIn: "7d" } }
     );
 
@@ -36,7 +39,6 @@ export const AuthenticateController = async (
       .send({
         token,
       });
-      
   } catch (error) {
     if (error instanceof InvalidCredentialsError)
       return reply.status(400).send({ message: error.message });

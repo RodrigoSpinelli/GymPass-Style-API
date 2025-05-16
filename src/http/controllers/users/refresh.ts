@@ -6,9 +6,14 @@ export const RefreshController = async (
 ) => {
   await request.jwtVerify({ onlyCookie: true });
 
-  const token = await reply.jwtSign({}, { sign: { sub: request.user.sub } });
+  const { role } = request.user;
+
+  const token = await reply.jwtSign(
+    { role },
+    { sign: { sub: request.user.sub } }
+  );
   const newRefreshToken = await reply.jwtSign(
-    {},
+    { role },
     { sign: { sub: request.user.sub, expiresIn: "7d" } }
   );
 
