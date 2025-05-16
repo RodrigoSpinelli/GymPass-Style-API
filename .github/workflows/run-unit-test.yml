@@ -12,7 +12,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: 'pnpm'
 
-      - run: npm ci
-      - run: npm run test
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - run: pnpm install
+      - run: pnpm run test
