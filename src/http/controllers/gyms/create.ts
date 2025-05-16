@@ -1,9 +1,8 @@
 import { z } from "zod";
 import { FastifyRequest, FastifyReply } from "fastify";
-import { GymAlreadyExistsError } from "@/use-cases/errors/gym-already-exists-error";
 import { makeCreateGymUseCase } from "@/use-cases/factories/make-create-gym-use-case";
 
-export const RegisterController = async (
+export const CreateGymController = async (
   request: FastifyRequest,
   reply: FastifyReply
 ) => {
