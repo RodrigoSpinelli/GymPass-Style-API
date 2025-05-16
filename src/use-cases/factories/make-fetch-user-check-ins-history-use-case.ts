@@ -1,4 +1,4 @@
-import { PrismaCheckInsRepository } from "@/http/repositories/prisma/check-ins-repository";
+import { PrismaCheckInsRepository } from "@/repositories/prisma/check-ins-repository";
 import { FetchUserCheckInsHistoryUseCase } from "../fetch-user-check-ins-history";
 
 export const makeFetchUserCheckInsHistoryUseCase = () => {

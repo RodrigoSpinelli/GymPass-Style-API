@@ -1,5 +1,5 @@
-import type { GymsRepository } from "@/http/repositories/gyms-repository";
-import { GymAlreadyExistsError } from "./error/gym-already-exists-error";
+import type { GymsRepository } from "@/repositories/gyms-repository";
+import { GymAlreadyExistsError } from "./errors/gym-already-exists-error";
 import type { Gym } from "@prisma";
 
 interface Request {

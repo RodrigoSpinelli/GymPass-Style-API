@@ -1,4 +1,4 @@
-import { PrismaGymsRepository } from "@/http/repositories/prisma/gyms-repository";
+import { PrismaGymsRepository } from "@/repositories/prisma/gyms-repository";
 import { FetchNearbyGymsUseCase } from "../fetch-nearby-gyms";
 
 export const makeFetchNearbyGymsUseCase = () => {

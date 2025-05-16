@@ -1,4 +1,4 @@
-import { getDistanceBetweenCoordinates } from "@/http/utils/get-distance-between-coordinates";
+import { getDistanceBetweenCoordinates } from "@/utils/get-distance-between-coordinates";
 import type { FindManyNearbyParams, GymsRepository } from "../gyms-repository";
 import { Gym, Prisma } from "@prisma";
 import { Decimal } from "@prisma/client/runtime/library";

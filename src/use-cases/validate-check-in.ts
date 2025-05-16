@@ -1,8 +1,8 @@
 import { CheckIn } from "@prisma";
 import { CheckInsRepository } from "../repositories/check-ins-repository";
-import { ResourceNotFoundError } from "@/http/use-cases/error/resource-not-found-error";
+import { ResourceNotFoundError } from "@/use-cases/errors/resource-not-found-error";
 import { differenceInMinutes } from "date-fns";
-import { LateCheckInValidationError } from "@/http/use-cases/error/late-check-in-validation-error";
+import { LateCheckInValidationError } from "@/use-cases/errors/late-check-in-validation-error";
 interface Request {
   checkInId: string;
 }

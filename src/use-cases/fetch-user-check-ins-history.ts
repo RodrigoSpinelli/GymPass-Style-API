@@ -1,4 +1,4 @@
-import type { CheckInsRepository } from "@/http/repositories/check-ins-repository";
+import type { CheckInsRepository } from "@/repositories/check-ins-repository";
 import { CheckIn } from "@prisma";
 
 interface Request {
