@@ -12,11 +12,6 @@ export const checkInsRoutes = async (app: FastifyInstance) => {
 
   app.post("/gyms/:gymId/check-ins", CreateCheckInController);
   app.get("/check-ins/history", HistoryCheckInsController);
-  app.patch("/check-ins/:checkInId/validate", ValidateCheckInController);
+  app.patch("/check-ins/:checkInId/validate", { preHandler: verifyUserRole(Role.ADMIN) }, ValidateCheckInController);
   app.get("/check-ins/metrics", MetricsCheckInsController);
-  app.patch(
-    "/check-ins/:checkInId/validate",
-    { preHandler: verifyUserRole(Role.ADMIN) },
-    ValidateCheckInController
-  );
 };
